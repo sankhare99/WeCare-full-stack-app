@@ -1,0 +1,46 @@
+h4{
+  color:white;
+}
+#coachid{
+  margin-top: 100px;
+  width: 300px;
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
+#password{
+  margin-top: 40px;
+  width: 300px;
+  margin-left: 40px;
+  margin-right: 50px;
+}
+
+#register-btn{
+  width: 300px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+#login-top-image{
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#login-top-message{
+  text-align: center;
+  float: right;
+  margin-right: 70px;
+  margin-top: 30px;
+
+}
+#coach-login-form-div{
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+  margin-left:450px;
+  margin-right: 450px;
+  border-radius: 10px;
+}

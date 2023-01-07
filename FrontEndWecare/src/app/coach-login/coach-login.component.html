@@ -1,0 +1,41 @@
+<nav class="navbar navbar-dark fixed-top " style="background-color: black;">
+  <div class="navbar navbar-expand-md container">
+      <div class="navbar-header mr-auto">
+        <a class="navbar-brand" >WeCare</a>
+      </div>
+        <ul  class="nav navbar-nav ml-auto">
+          <li class="nav-item" ><a class="nav-link">Call Us: 080 2233447</a></li>
+        </ul>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
+<div  id="coach-login-form-div">
+  <div id="login-top-message">
+    <h4>Login As a Life Coach</h4>
+  </div>
+    <div  id="login-top-image">
+      <img src="assets/Life Coach LogIn.jpg" style="height: 50px; width: 50px;">
+    </div>
+    <br>
+    <div class="container" id="login-form">
+      <form [formGroup]="coachLoginForm" (ngSubmit)="coachLogin()">
+        <div class="form-group" id="coachid">
+          <input type="text" class="form-control" formControlName="id" placeholder="Coach Id">
+           <p *ngIf="coachLoginForm.controls.id.errors && coachLoginForm.controls.id.touched" style="color:red">Coach Id is a mandatory field!</p>
+        </div>
+        <div class="form-group"id="password">
+          <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          <p *ngIf="coachLoginForm.controls.password.errors && coachLoginForm.controls.password.touched" style="color:red">Password should have 5 to 10 characters!</p>
+        </div>
+        <div class="row justify-content-center" id="register-btn">
+          <button type="submit" class="btn btn-primary" >Login</button>
+      </div>
+      <span style="color:red"*ngIf="!loginSuccess &&  submitted">Invalid Coach Id or Password</span>
+      </form>
+    </div>
+  <br/>
+</div>

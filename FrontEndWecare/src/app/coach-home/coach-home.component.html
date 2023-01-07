@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<nav class="navbar navbar-expand-md">
+  <a class="navbar-brand logo " style="margin-left: 60px;" href="#">WeCare</a>
+  <button   class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item myitem">
+        <a class="nav-link mylink disable" [routerLink]="['/coachProfile']" ><i class="fa fa-user"></i>&nbsp;View Profile</a>
+      </li>
+      <li class="nav-item myitem">
+        <a class="nav-link mylink disable" [routerLink]="['/coachHome']"><i class="fa fa-list"></i>&nbsp;My Schedules</a>
+      </li>
+      <li class="nav-item myitem">
+        <a class="nav-link mylink disable" [routerLink]="['/home']"><i class="fa fa-phone"></i>&nbsp;Call Us : 080 2233447</a>
+      </li>
+
+      <li class="nav-item myitem" >
+        <a class="nav-link mylink"(click)="coachLogout()"><i class="fa fa-sign-out" ></i>&nbsp;Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+
+<div *ngIf="schedules " class="row justify-content-center">
+  <br><br>
+  <div *ngFor="let coach of schedules" class="col-4 m-3 card justify-content-around"
+          style="background-color:black;">
+      <div class="card-body">
+          <div class="row justify-content-center">
+              <h3>Appointment Date:</h3>
+              <h4>{{coach.appointmentDate | date : 'fullDate' }}</h4>
+          </div>
+          <br>
+          <div class=" row justify-content-center">
+              <h5>Slot: {{coach.slot}}</h5>
+          </div>
+          <div class=" row justify-content-center">
+              <h6>Booking Id: {{coach.bookingId}}</h6>
+          </div>
+          <div class=" row justify-content-center">
+              <h6>User Id: {{coach.userId}}</h6>
+          </div>
+      </div>
+  </div>
+</div>
+<div *ngIf="errorFetch" class=" row justify-content-center ">
+      <h2>Could Not Find any Bookings</h2>
+</div>

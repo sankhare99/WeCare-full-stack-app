@@ -1,0 +1,24 @@
+h4{
+  color:white;
+}
+h5{
+  color:white;
+}
+h6{
+  color:white;
+}
+img {
+  padding-top: 20px;
+  min-width: 60%;
+  min-height: 60%;
+  width: auto;
+  height: auto;
+  }
+  .shadow {
+      -webkit-box-shadow: 3px 3px 5px 6px #ccc;  
+      -moz-box-shadow:    3px 3px 5px 6px #ccc;
+      box-shadow:         3px 3px 5px 6px #ccc;
+    }
+    #collapsibleNavbar{
+      margin-left: 500px;
+      }
